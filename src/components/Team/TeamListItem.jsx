@@ -1,11 +1,12 @@
 import {FaFacebookF, FaInstagram, FaTwitter} from "react-icons/fa";
+import Image from "next/image";
 
 const TeamListItem = ({item}) => {
     const {name, bio, image, facebook, twitter, instagram} = item || {};
     return (
         <>
             <div className="member rounded-2xl relative">
-                <img className="w-full rounded-t-3xl h-[390px]" src={image} alt="member"/>
+                <Image className="w-full rounded-t-3xl h-[390px]" src={image} placeholder="blur" blurDataURL={process.env.PLACEHOLDER_IMAGE} width={500} height={500} alt="member"/>
                 <h1 className="text-3xl font-semibold leading-7 text-center text-[#101A29] pt-6 pb-7">
                     {name}
                 </h1>

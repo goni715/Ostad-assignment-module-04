@@ -1,5 +1,5 @@
 import {FaArrowRight} from "react-icons/fa";
-import React from "react";
+import Image from "next/image";
 
 const WorkListItem = ({item}) => {
     const {title, des, } = item || {};
@@ -8,7 +8,7 @@ const WorkListItem = ({item}) => {
         <>
             <div className="">
                 <div className="bg-[#D7F5DC] flex w-[80px] h-[80px] justify-center items-center rounded-2xl ">
-                    <img src="Activity.svg" className="w-[34px] h-[34px]"  alt=""/>
+                    <Image src="Activity.svg" className="w-[34px] h-[34px]" width={500} height={500}  alt="work"/>
                 </div>
                 <h1 className="text-2xl font-semibold my-4">
                     {title}

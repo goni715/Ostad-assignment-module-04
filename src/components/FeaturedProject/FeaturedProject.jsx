@@ -1,5 +1,6 @@
 import FeaturedProjectItem from "@/components/FeaturedProject/FeaturedProjectItem";
 import moment from 'moment';
+import Image from "next/image";
 async function getData(){
     const res=await fetch(process.env.BASE_URL+"api/FeaturedProject");
     if(!res.ok){
@@ -22,7 +23,7 @@ const FeaturedProject = async () => {
 
                 <div className="grid grid-cols-2 gap-8 mt-12">
                     <div className="h-full">
-                        <img className="w-full h-[86%] rounded-xl" src={data[0]['image']} alt=""/>
+                        <Image className="w-full h-[86%] rounded-xl" src={data[0]['image']} width={500} height={500} placeholder="blur" blurDataURL={process.env.PLACEHOLDER_IMAGE} alt=""/>
                         <p className="text-sm leading-6 text-[#2E3E5C] py-4">
                             App Design - {moment(data[0]['created_at']).format('LL')}
                         </p>

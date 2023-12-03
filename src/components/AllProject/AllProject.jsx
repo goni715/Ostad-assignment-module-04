@@ -1,5 +1,4 @@
-import TestimonialItem from "@/components/Testimonial/TestimonialItem";
-import ProjectItem from "@/components/AllProject/ProjectItem";
+import AllProjectItem from "@/components/AllProject/AllProjectItem";
 
 async function getData(){
     const res=await fetch(process.env.BASE_URL+"api/AllProject");
@@ -28,7 +27,7 @@ const AllProject = async () => {
                     {
                         data.map((item, i)=>{
                             return(
-                                <ProjectItem key={i.toString()} item={item}/>
+                                <AllProjectItem key={i.toString()} item={item}/>
                             )
                         })
                     }

@@ -1,6 +1,6 @@
 import React from "react";
 import ServiceItem from "@/components/Service/ServiceItem";
-import ProjectItem from "@/components/AllProject/ProjectItem";
+import AllProjectItem from "@/components/AllProject/AllProjectItem";
 async function getData(){
     const res=await fetch(process.env.BASE_URL+"api/AllService");
     if(!res.ok){

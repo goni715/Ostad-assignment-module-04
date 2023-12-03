@@ -1,3 +1,4 @@
+import Image from "next/image";
 
 async function getData(){
     const res=await fetch(process.env.BASE_URL+"api/HeroList");
@@ -29,12 +30,12 @@ const Hero = async () => {
 
                     <div className="right-part w-1/2 flex flex-col gap-3">
                         <div className="flex gap-2.5 w-full h-1/2">
-                            <img className="w-3/5 h-[270px] rounded-xl" src={image1} alt="hero1"/>
-                            <img className="w-2/5 h-[270px] rounded-xl" src={image2} alt="hero2"/>
+                            <Image width={500} height={500} className="w-3/5 h-[270px] rounded-xl" src={image1} placeholder="blur" blurDataURL={process.env.PLACEHOLDER_IMAGE} alt="hero1"/>
+                            <Image width={500} height={500} className="w-2/5 h-[270px] rounded-xl" src={image2} placeholder="blur" blurDataURL={process.env.PLACEHOLDER_IMAGE} alt="hero2"/>
                         </div>
                         <div className="flex gap-2.5 w-full h-1/2">
-                            <img className="w-2/5 h-[200px] rounded-xl" src={image3} alt="hero3"/>
-                            <img className="w-3/5 h-[200px] rounded-xl" src={image4} alt="hero4"/>
+                            <Image width={500} height={500} className="w-2/5 h-[200px] rounded-xl" src={image3} placeholder="blur" blurDataURL={process.env.PLACEHOLDER_IMAGE} alt="hero3"/>
+                            <Image width={500} height={500} className="w-3/5 h-[200px] rounded-xl" src={image4} placeholder="blur" blurDataURL={process.env.PLACEHOLDER_IMAGE} alt="hero4"/>
                         </div>
                     </div>
                 </div>
