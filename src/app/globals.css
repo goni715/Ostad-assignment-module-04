@@ -2,26 +2,36 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+.navBackground{
+  background: transparent;
+  z-index: 9999 !important;
+}
+.navScrollBackground{
+  z-index: 9999 !important;
+  background: white !important;
+  box-shadow: 0 0 6px 0 rgba(0,115,230,0.3) !important;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.main-div{
+  background: linear-gradient(180deg, #D7F5DC 0%, #D7F5DC 100%) !important;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.states{
+  box-shadow: 4px 9px 20px 0 rgba(0, 0, 0, 0.07);
+}
+
+.team{
+  background: radial-gradient(50% 50% at 50% 50%, #D7F5DC 0%, rgba(255, 255, 255, 0.00) 100%);
+}
+
+.member{
+  box-shadow: 0 4.4px 20px -1px rgba(19, 16, 34, 0.05);
+}
+
+.service{
+  box-shadow: 1px 4px 30px 0 rgba(0, 0, 0, 0.20);
+}
+
+.all-project{
+  box-shadow: 0 4px 30px 0 rgba(0, 0, 0, 0.09);
 }
