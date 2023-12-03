@@ -5,7 +5,7 @@ const FeaturedProjectItem = ({item}) => {
     return (
         <>
             <div>
-                <Image src={image} className="w-full h-auto rounded-xl" width={500} height={500} alt="featured"/>
+                <Image src={image} className="w-full h-auto rounded-xl" placeholder="blur" blurDataURL={process.env.PLACEHOLDER_IMAGE} width={500} height={500} alt="featured"/>
                 <p className="text-sm leading-6 text-[#2E3E5C] py-4">
                     App Design - {moment(created_at).format('LL')}
                 </p>
