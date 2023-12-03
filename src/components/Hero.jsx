@@ -48,7 +48,7 @@ const Hero = async () => {
                     <img src="Trello.png" alt=""/>
                     <img src="monday.svg" alt=""/>
                     <img src="Notion.png" alt=""/>
-                    <img src="slack.png" alt=""/>
+                    <img src="Slack.png" alt=""/>
                 </div>
                 {/**/}
 
